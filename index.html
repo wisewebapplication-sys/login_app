@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>WISE - Mobile</title>
+    <link rel="icon" href="images/wise_logo.png"> 
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
     <div class="container">
@@ -59,7 +61,7 @@
             </div>
         </div>
 
-        <!-- VERIFICATION VIEW -->
+        <!-- VERIFICATION VIEW 
         <div id="verification" class="view verification-view">
             <button class="close-btn" onclick="goToLogin()">✕</button>
             <div class="paper-plane">✈️</div>
@@ -73,7 +75,7 @@
                 <span></span>
             </div>
         </div>
-
+        -->
         <!-- DASHBOARD VIEW -->
         <div id="dashboard" class="view">
             <div class="top-bar">
@@ -252,126 +254,250 @@
             </div>
         </div>
 
+        <!-- CARDS VIEW -->
+        <div id="cards" class="view">
+            <div class="card-header">
+                <div class="card-hint">
+                    <span>💳</span>
+                    <span>Consejos para viajar</span>
+                </div>
+                <button class="badge-btn">Pide una tarjeta</button>
+            </div>
+
+            <h1>Tarjetas</h1>
+
+            <div class="wise-card">
+                <div class="card-watermark">Wise</div>
+                <div class="card-content">
+                    <div class="chip">
+                        <div class="chip-inner"></div>
+                    </div>
+                    <div class="visa-logo">VISA</div>
+                </div>
+            </div>
+
+            <div class="card-info">
+                <div class="card-type">Tarjeta física</div>
+                <div class="card-number">•••• 0437</div>
+            </div>
+
+            <div class="card-actions">
+                <button class="card-action">
+                    <div class="action-icon">
+                        <img src="images/dial-pad.png" alt="" width="30" height="30">
+                    </div>
+                    <div class="action-label">Mostrar PIN</div>
+                </button>
+                <button class="card-action">
+                    <div class="action-icon">
+                        <img src="images/cardblack.png" alt="" width="36" height="36">
+                    </div>
+                    <div class="action-label">Datos de la tarjeta</div>
+                </button>
+                <button class="card-action">
+                    <div class="action-icon">
+                        <img src="images/cool.png" alt="" width="36" height="36">
+                    </div>
+                    <div class="action-label">Congelar tarjeta</div>
+                </button>
+            </div>
+
+            <button class="google-pay-btn">
+                <span> <img src="images/cards.png" width="36" height="36">  </span>
+                <span>Agregar a <img src="images/G play.png" width="12" height="12"> Pay</span>
+            </button>
+
+            <div class="balance-label">Gestionar tarjeta</div>
+        </div>
+
+        <!-- RECIPIENTS VIEW -->
+        <div id="recipients" class="view">
+            <div class="recipients-header">
+                <h1 style="margin: 0;">Destinatarios</h1>
+                <button class="invite-btn">🎁 Invitar</button>
+            </div>
+
+            <button class="add-recipient-btn">Añadir destinatario</button>
+
+            <div class="balance-label" style="margin-bottom: 16px;">Recientes</div>
+
+            <div class="recipients-grid">
+                <div class="recipient-item">
+                    <div class="recipient-avatar primary">↱</div>
+                    <div class="recipient-name">Juan G.</div>
+                    <div class="recipient-handle">@juang1778</div>
+                </div>
+                <div class="recipient-item">
+                    <div class="recipient-avatar primary">↱</div>
+                    <div class="recipient-name">Marianna T.</div>
+                    <div class="recipient-handle">@mariannat...</div>
+                </div>
+                <div class="recipient-item">
+                    <div class="recipient-avatar primary">D</div>
+                    <div style="font-size: 12px; margin-bottom: 4px;">🇺🇸</div>
+                    <div class="recipient-name">DolarApp</div>
+                    <div class="recipient-handle">Lead Bank</div>
+                </div>
+                <div class="recipient-item">
+                    <div class="recipient-avatar secondary">LP</div>
+                    <div class="recipient-name">Leidy P.</div>
+                    <div class="recipient-handle">@leidyjoha...</div>
+                </div>
+                <div class="recipient-item">
+                    <div class="recipient-avatar secondary">↱</div>
+                    <div class="recipient-name">MATIAS A.</div>
+                    <div class="recipient-handle">@matiasa3...</div>
+                </div>
+                <div class="recipient-item">
+                    <div class="recipient-avatar secondary">US</div>
+                    <div class="recipient-name">UAB S.</div>
+                    <div class="recipient-handle">Uab Instare...</div>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <button class="tab active">Todos</button>
+                <button class="tab">Mis cuentas</button>
+                <button class="search-btn">
+                    <span>🔍</span>
+                    <span>Buscar</span>
+                </button>
+            </div>
+
+            <div class="recipient-list-item">
+                <div class="recipient-list-info">
+                    <div class="recipient-list-avatar">D</div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <span style="font-size: 14px;">🇺🇸</span>
+                        <div>
+                            <div class="recipient-list-name">DolarApp</div>
+                            <div class="recipient-list-details">Lead Bank que termina en ··5627</div>
+                        </div>
+                    </div>
+                </div>
+                <span style="color: #9ca3af;">›</span>
+            </div>
+
+            <div class="recipient-list-item">
+                <div class="recipient-list-info">
+                    <div class="recipient-list-avatar" style="background: #4b5563;"></div>
+                    <div>
+                        <div class="recipient-list-name">Juan Camilo García</div>
+                    </div>
+                </div>
+                <span style="color: #9ca3af;">›</span>
+            </div>
+        </div>
+
+        <!-- PAYMENTS VIEW -->
+        <div id="payments" class="view">
+            <h1>Pagos</h1>
+
+            <div class="payments-actions">
+                <button class="action-btn primary">Enviar</button>
+                <button class="action-btn">Solicitar</button>
+            </div>
+
+            <div class="payment-card">
+                <div class="payment-card-content">
+                    <div class="payment-icon-wrapper">
+                        <div class="payment-icon" style="background: #1e3a8a;">1️⃣</div>
+                        <div>
+                            <div class="payment-title">Pagos recurrentes con tarjeta</div>
+                            <div class="payment-subtitle">4 activos</div>
+                        </div>
+                    </div>
+                    <span style="color: #9ca3af;">›</span>
+                </div>
+            </div>
+
+            <div class="payment-card">
+                <div class="payment-card-content">
+                    <div class="payment-icon-wrapper">
+                        <div class="payment-icon">
+                            ⇄
+                            <div class="payment-badge">+</div>
+                        </div>
+                        <div>
+                            <div class="payment-title">Transferencias programadas</div>
+                        </div>
+                    </div>
+                    <span style="color: #9ca3af;">›</span>
+                </div>
+                <div class="payment-description">Configura una transferencia para enviarla más tarde.</div>
+            </div>
+
+            <div class="payment-card">
+                <div class="payment-card-content">
+                    <div class="payment-icon-wrapper">
+                        <div class="payment-icon">
+                            🔄
+                            <div class="payment-badge">+</div>
+                        </div>
+                        <div>
+                            <div class="payment-title">Domiciliación de pagos</div>
+                        </div>
+                    </div>
+                    <span style="color: #9ca3af;">›</span>
+                </div>
+                <div class="payment-description">Configura y gestiona pagos regulares.</div>
+            </div>
+
+            <div class="payment-card">
+                <div class="payment-card-content">
+                    <div class="payment-icon-wrapper">
+                        <div class="payment-icon">
+                            📄
+                            <div class="payment-badge">+</div>
+                        </div>
+                        <div>
+                            <div class="payment-title">Solicitudes de pago</div>
+                        </div>
+                    </div>
+                    <span style="color: #9ca3af;">›</span>
+                </div>
+                <div class="payment-description">Crea y gestiona los pagos que has solicitado.</div>
+            </div>
+
+            <div class="payment-card highlight">
+                <div class="payment-card-content">
+                    <div class="payment-icon-wrapper">
+                        <div class="payment-icon">
+                            👥
+                            <div class="payment-badge">+</div>
+                        </div>
+                        <div>
+                            <div class="payment-title">Cuentas divididas</div>
+                        </div>
+                    </div>
+                    <span style="color: #9ca3af;">›</span>
+                </div>
+                <div class="payment-description">Divide una transacción con varias personas.</div>
+            </div>
+        </div>
+
         <!-- BOTTOM NAVIGATION -->
-        <div class="bottom-nav hidden">
+        <div class="bottom-nav">  
             <button class="nav-item active" onclick="showView('dashboard')">
-                <span class="nav-icon">🏠</span>
+                <span class="nav-icon"> <img src="images/home.png" width="24" height="24"></span>
                 <span class="nav-label">Inicio</span>
             </button>
             <button class="nav-item" onclick="showView('cards')">
-                <span class="nav-icon">💳</span>
+                <span class="nav-icon"> <img src="images/cards.png" width="24" height="24"></span>
                 <span class="nav-label">Tarjetas</span>
             </button>
             <button class="nav-item" onclick="showView('recipients')">
-                <span class="nav-icon">👥</span>
+                <span class="nav-icon"> <img src="images/destinatarios.png" width="24" height="24"></span>
                 <span class="nav-label">Destinatarios</span>
             </button>
             <button class="nav-item" onclick="showView('payments')">
-                <span class="nav-icon">💵</span>
+                <span class="nav-icon"> <img src="images/double-arrow.png" width="24" height="36"></span>
                 <span class="nav-label">Pagos</span>
             </button>
-        </div>
+        </div> 
     </div>
-
     
-    <script>
-        // Variables globales
-        let currentView = 'login';
-        let verificationTimer = null;
-        let isInitialized = false;
 
-        // Cambiar de vista
-        function showView(viewName) {
-            console.log('🔄 Cambiando a vista:', viewName, 'desde:', currentView);
-
-            // Limpiar timer de verificación si existe
-            if (verificationTimer) {
-                clearTimeout(verificationTimer);
-                verificationTimer = null;
-                console.log('🧹 Timer limpiado');
-            }
-
-            // Ocultar todas las vistas
-            document.querySelectorAll('.view.active').forEach(v => v.classList.remove('active'));
-
-            // Mostrar la vista seleccionada
-            const targetView = document.getElementById(viewName);
-            if (targetView) {
-                targetView.classList.add('active');
-                currentView = viewName;
-                console.log('✅ Vista activada:', viewName);
-            } else {
-                console.error('❌ Vista no encontrada:', viewName);
-                return;
-            }
-
-            // Actualizar estado del bottom nav
-            const bottomNav = document.querySelector('.bottom-nav');
-            if (bottomNav) {
-                if (viewName === 'login' || viewName === 'verification') {
-                    bottomNav.classList.add('hidden');
-                } else {
-                    bottomNav.classList.remove('hidden');
-                }
-            }
-
-            // Actualizar estado activo del nav
-            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
-            const navItems = document.querySelectorAll('.nav-item');
-            if (viewName === 'dashboard' && navItems[0]) navItems[0].classList.add('active');
-            if (viewName === 'cards' && navItems[1]) navItems[1].classList.add('active');
-            if (viewName === 'recipients' && navItems[2]) navItems[2].classList.add('active');
-            if (viewName === 'payments' && navItems[3]) navItems[3].classList.add('active');
-        }
-
-        // Ir a pantalla de verificación
-        function goToVerification() {
-            console.log('🚀 Iniciando verificación...');
-            showView('verification');
-
-            // Simular proceso de verificación de 3 segundos
-            verificationTimer = setTimeout(() => {
-                console.log('⏰ Verificación completada. Redirigiendo al dashboard...');
-                showView('dashboard');
-            }, 3000);
-        }
-
-        // Cancelar verificación y volver al login
-        function goToLogin() {
-            console.log('⬅️ Cancelando verificación y volviendo al login...');
-            if (verificationTimer) {
-                clearTimeout(verificationTimer);
-                verificationTimer = null;
-            }
-            showView('login');
-        }
-
-        // Mostrar u ocultar contraseña
-        function togglePassword() {
-            const input = document.getElementById('password');
-            if (input) {
-                input.type = input.type === 'password' ? 'text' : 'password';
-            }
-        }
-
-        // Inicializar al cargar el DOM
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('📱 Página cargada - Inicializando...');
-
-            const bottomNav = document.querySelector('.bottom-nav');
-            if (bottomNav) bottomNav.classList.add('hidden');
-
-            ['login', 'verification', 'dashboard'].forEach(id => {
-                const view = document.getElementById(id);
-                if (view) console.log('✅ Vista encontrada:', id);
-                else console.error('❌ Vista NO encontrada:', id);
-            });
-
-            isInitialized = true;
-            showView('login'); // Mostrar solo una vez al cargar
-            console.log('✅ Inicialización completada');
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
