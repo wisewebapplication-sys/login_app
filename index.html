@@ -78,6 +78,7 @@
             </div>
         </div>
         -->
+        
         <!-- DASHBOARD VIEW -->
         <div id="dashboard" class="view">
             <div class="top-bar">
@@ -89,14 +90,14 @@
                 <div class="balance-label">Saldo total</div>
                 <div class="balance-amount">
                     12.374,82 EUR
-                    <span class="trend-icon"><i class="fas fa-signal"></i></span>
+                    <span class="trend-icon"><i class="fa-solid fa-signal" aria-hidden="true"></i></span>
                 </div>
             </div>
 
             <div class="action-buttons">
                 <button class="action-btn primary">Enviar</button>
                 <button class="action-btn">Añadir dinero</button>
-                <button class="action-btn">Solicitar <i class="fas fa-chevron-down"></i></button>
+                <button class="action-btn">Solicitar <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
             </div>
 
             <div class="currency-grid">
@@ -134,7 +135,7 @@
             <div class="transaction-list">
                 <div class="transaction-item">
                     <div style="display: flex; align-items: center;">
-                        <div class="transaction-icon">
+                        <div class="transaction-icon" style="background: white;">
                             <img src="images/google one.png" alt="Google one" width="36" height="36" alt="Fingerprint scan">
                         </div>
                         <div class="transaction-info">
@@ -147,7 +148,9 @@
 
                 <div class="transaction-item">
                     <div style="display: flex; align-items: center;">
-                        <div class="transaction-icon" style="background: #81e145;">🏠</div>
+                        <div class="transaction-icon" style="background: #2c2c2c;">
+                            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                        </div>
                         <div class="transaction-info">
                             <div class="transaction-name">BOOT CAMP CHILE</div>
                             <div class="transaction-date">Mon, 10 Nov</div>
@@ -159,35 +162,41 @@
 
                 <div class="transaction-item">
                     <div style="display: flex; align-items: center;">
-                        <div class="transaction-icon" style="background: #eeefef;">🛒</div>
+                        <div class="transaction-icon" style="background: #2c2c2c;">
+                            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                        </div>
                         <div class="transaction-info">
                             <div class="transaction-name">Súper La Torre</div>
                             <div class="transaction-date">Thu, 6 Nov</div>
                         </div>
                     </div>
                     <div class="transaction-amount">
-                        <div class="amount-primary">160,26 QTZ</div>
+                        <div class="amount-primary">160,26 GTQ</div>
                         <div class="amount-secondary">11,48 USD</div>
                     </div>
                 </div>
 
                 <div class="transaction-item">
                     <div style="display: flex; align-items: center;">
-                        <div class="transaction-icon" style="background: #eeefef;">🛒</div>
+                        <div class="transaction-icon" style="background: #2c2c2c;">
+                            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                        </div>
                         <div class="transaction-info">
                             <div class="transaction-name">Súper La Torre</div>
                             <div class="transaction-date">Mon, 3 Nov</div>
                         </div>
                     </div>
                     <div class="transaction-amount">
-                        <div class="amount-primary">40,26 QTZ</div>
+                        <div class="amount-primary">40,26 GTQ</div>
                         <div class="amount-secondary">5,48 USD</div>
                     </div>
                 </div>
 
                 <div class="transaction-item">
                     <div style="display: flex; align-items: center;">
-                        <div class="transaction-icon" style="background: #81e145;">💻</div>
+                        <div class="transaction-icon" style="background: #2c2c2c;">
+                            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                        </div>
                         <div class="transaction-info">
                             <div class="transaction-name">Deel, Inc.</div>
                             <div class="transaction-date">Mon, 3 Nov</div>
@@ -198,14 +207,33 @@
 
                 <div class="transaction-item">
                     <div style="display: flex; align-items: center;">
-                        <div class="transaction-icon" style="background: #eeefef;">🚘</div>
+                        <div class="transaction-icon" style="background: #2c2c2c;">
+                            <i class="fa-regular fa-file-lines" aria-hidden="true"></i>
+                        </div>
+                        <div class="transaction-info">
+                            <div class="transaction-name">Border Mgmt Agency</div>
+                            <div class="transaction-date">Thu, 30 Oct</div>
+                        </div>
+                    </div>
+                    <div class="transaction-amount">
+                        <div class="amount-primary">80 BZD</div>
+                        <div class="amount-secondary">34,88 USD</div>
+                    </div>
+                </div>
+
+
+                <div class="transaction-item">
+                    <div style="display: flex; align-items: center;">
+                        <div class="transaction-icon" style="background: #2c2c2c;">
+                            <i class="fa-solid fa-car" aria-hidden="true"></i>
+                        </div>
                         <div class="transaction-info">
                             <div class="transaction-name">Insurance</div>
                             <div class="transaction-date">Tue, 23 Oct</div>
                         </div>
                     </div>
                     <div class="transaction-amount">
-                        <div class="amount-primary">29,10 BEL</div>
+                        <div class="amount-primary">29,10 BZD</div>
                         <div class="amount-secondary">15,93 USD</div>
                     </div>
                 </div>
@@ -213,7 +241,9 @@
 
                 <div class="transaction-item">
                     <div style="display: flex; align-items: center;">
-                        <div class="transaction-icon" style="background: #eeefef;">🛒</div>
+                        <div class="transaction-icon" style="background: #2c2c2c;">
+                            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                        </div>
                         <div class="transaction-info">
                             <div class="transaction-name">Chedraui</div>
                             <div class="transaction-date">Tue, 03 Oct</div>
@@ -225,10 +255,11 @@
                     </div>
                 </div>
 
-                
                 <div class="transaction-item">
                     <div style="display: flex; align-items: center;">
-                        <div class="transaction-icon" style="background: #81e145;">💻</div>
+                        <div class="transaction-icon" style="background: #2c2c2c;">
+                            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                        </div>
                         <div class="transaction-info">
                             <div class="transaction-name">Deel, Inc.</div>
                             <div class="transaction-date">Mon, 6 Oct</div>
@@ -239,7 +270,9 @@
 
                 <div class="transaction-item">
                     <div style="display: flex; align-items: center;">
-                        <div class="transaction-icon" style="background: #dc2626;">💶</div>
+                        <div class="transaction-icon" style="background: #2c2c2c;">
+                            <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+                        </div>
                         <div class="transaction-info">
                             <div class="transaction-name">Juan Camilo Garcia</div>
                             <div class="transaction-date">Fri, 24 Sep</div>
@@ -253,7 +286,9 @@
 
                 <div class="transaction-item">
                     <div style="display: flex; align-items: center;">
-                        <div class="transaction-icon" style="background: #eeefef;">🛒</div>
+                        <div class="transaction-icon" style="background: #2c2c2c;">
+                            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                        </div>
                         <div class="transaction-info">
                             <div class="transaction-name">Chedraui</div>
                             <div class="transaction-date">Tue, 23 Sep</div>
@@ -267,7 +302,9 @@
 
                 <div class="transaction-item">
                     <div style="display: flex; align-items: center;">
-                        <div class="transaction-icon" style="background: #81e145;">🏠</div>
+                        <div class="transaction-icon" style="background: #2c2c2c;">
+                            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                        </div>
                         <div class="transaction-info">
                             <div class="transaction-name">BOOT CAMP CHILE</div>
                             <div class="transaction-date">Mon, 1 Sep</div>
@@ -276,6 +313,91 @@
                     <div class="transaction-amount" style="color: #81e145;">+ 1802,21 USD</div>
                 </div>
 
+            </div>
+
+            <div class="transfer-tools">
+                <div class="transfer-card">
+                    <h3 class="transfer-title">Calculadora de transferencias</h3>
+                    <div class="transfer-graph">
+                        <svg viewBox="0 0 300 120" preserveAspectRatio="none" role="img" aria-label="Tendencia del tipo de cambio">
+                            <defs>
+                                <linearGradient id="graphGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#4ade80"/>
+                                    <stop offset="100%" stop-color="#81e145"/>
+                                </linearGradient>
+                            </defs>
+                            <polyline fill="none" stroke="url(#graphGradient)" stroke-width="4" stroke-linecap="round"
+                                points="0,80 40,60 80,70 120,40 160,60 200,62 240,90 280,55 300,70" />
+                            <circle cx="280" cy="55" r="6" fill="#1a1a1a" stroke="#81e145" stroke-width="4"></circle>
+                        </svg>
+                        <div class="graph-axis graph-axis--left">6 oct</div>
+                        <div class="graph-axis graph-axis--right">Hoy</div>
+                        <div class="graph-scale">
+                            <span>1.17</span>
+                            <span>1.16</span>
+                            <span>1.15</span>
+                        </div>
+                    </div>
+                    <div class="exchange-rate">1 EUR = 1,1538 USD</div>
+
+                    <div class="exchange-inputs">
+                        <div class="exchange-row">
+                            <div class="exchange-amount">26</div>
+                            <div class="exchange-meta">
+                                <span class="exchange-flag" aria-hidden="true">🇪🇺</span>
+                                <span class="exchange-currency">EUR</span>
+                                <i class="fa-solid fa-chevron-down exchange-arrow" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="exchange-switch">
+                            <i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i>
+                        </div>
+                        <div class="exchange-row">
+                            <div class="exchange-amount">28.10</div>
+                            <div class="exchange-meta">
+                                <span class="exchange-flag" aria-hidden="true">🇺🇸</span>
+                                <span class="exchange-currency">USD</span>
+                                <i class="fa-solid fa-chevron-down exchange-arrow" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exchange-summary">
+                        <div class="summary-item">
+                            <span class="summary-label">Incluye comisiones</span>
+                            <span class="summary-value">1,65 EUR</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Debería llegar</span>
+                            <span class="summary-value">Antes del viernes</span>
+                        </div>
+                    </div>
+
+                    <button class="transfer-submit">Enviar</button>
+                </div>
+
+                <div class="rate-alert">
+                    <div class="rate-alert-icon">
+                        <i class="fa-regular fa-bell" aria-hidden="true"></i>
+                    </div>
+                    <div class="rate-alert-content">
+                        <div class="rate-alert-title">Recibe actualizaciones del tipo de cambio</div>
+                    </div>
+                    <span class="rate-alert-arrow">›</span>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                    </div>
+                    <div class="security-content">
+                        <div class="security-title">Tu dinero está protegido</div>
+                        <p class="security-copy">
+                            Nos comprometemos a proteger cada céntimo con tecnología de vanguardia y atención al cliente en cualquier momento.
+                        </p>
+                        <button class="security-cta">Más información</button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -290,7 +412,7 @@
                 <div class="profile-avatar-large">
                     <div class="avatar-circle">GA</div>
                     <button class="camera-btn" aria-label="Cambiar foto">
-                        <i class="fas fa-camera"></i>
+                        <i class="fa-solid fa-camera camera-icon" aria-hidden="true"></i>
                     </button>
                 </div>
                 <h2 class="profile-name">GISELA SOLEDAD<br>ARES RODRIGUEZ</h2>
@@ -307,7 +429,7 @@
                 <h3 class="section-title-small">Tu cuenta</h3>
                 
                 <div class="profile-menu-item">
-                    <div class="menu-icon"><i class="far fa-bell"></i></div>
+                    <div class="menu-icon"><i class="fa-regular fa-bell" aria-hidden="true"></i></div>
                     <div class="menu-content">
                         <div class="menu-title">Bandeja de entrada</div>
                     </div>
@@ -316,7 +438,7 @@
                 </div>
 
                 <div class="profile-menu-item">
-                    <div class="menu-icon"><i class="fas fa-question"></i></div>
+                    <div class="menu-icon"><i class="fa-solid fa-circle-question" aria-hidden="true"></i></div>
                     <div class="menu-content">
                         <div class="menu-title">Ayuda</div>
                     </div>
@@ -324,7 +446,7 @@
                 </div>
 
                 <div class="profile-menu-item">
-                    <div class="menu-icon"><i class="far fa-copy"></i></div>
+                    <div class="menu-icon"><i class="fa-regular fa-copy" aria-hidden="true"></i></div>
                     <div class="menu-content">
                         <div class="menu-title">Extractos e informes</div>
                     </div>
@@ -336,7 +458,7 @@
                 <h3 class="section-title-small">Ajustes</h3>
                 
                 <div class="profile-menu-item">
-                    <div class="menu-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="menu-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
                     <div class="menu-content">
                         <div class="menu-title">Seguridad y privacidad</div>
                         <div class="menu-subtitle">Cambia los ajustes de seguridad y privacidad</div>
@@ -345,7 +467,7 @@
                 </div>
 
                 <div class="profile-menu-item">
-                    <div class="menu-icon"><i class="far fa-bell"></i></div>
+                    <div class="menu-icon"><i class="fa-regular fa-bell" aria-hidden="true"></i></div>
                     <div class="menu-content">
                         <div class="menu-title">Notificaciones</div>
                         <div class="menu-subtitle">Personaliza cómo obtienes las actualizaciones</div>
@@ -354,7 +476,7 @@
                 </div>
 
                 <div class="profile-menu-item">
-                    <div class="menu-icon"><i class="fas fa-university"></i></div>
+                    <div class="menu-icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></div>
                     <div class="menu-content">
                         <div class="menu-title">Métodos de pago</div>
                         <div class="menu-subtitle">Gestiona las tarjetas guardadas y las cuentas bancarias</div>
@@ -363,7 +485,7 @@
                 </div>
 
                 <div class="profile-menu-item">
-                    <div class="menu-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <div class="menu-icon"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></div>
                     <div class="menu-content">
                         <div class="menu-title">Límites</div>
                         <div class="menu-subtitle">Gestiona los límites de transferencia y tarjeta</div>
@@ -372,7 +494,7 @@
                 </div>
 
                 <div class="profile-menu-item">
-                    <div class="menu-icon"><i class="fas fa-dot-circle"></i></div>
+                    <div class="menu-icon"><i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i></div>
                     <div class="menu-content">
                         <div class="menu-title">Lenguaje y apariencia</div>
                         <div class="menu-subtitle">Personaliza la configuración de idioma y qué tema se utiliza</div>
@@ -381,7 +503,7 @@
                 </div>
 
                 <div class="profile-menu-item">
-                    <div class="menu-icon"><i class="far fa-user"></i></div>
+                    <div class="menu-icon"><i class="fa-regular fa-user" aria-hidden="true"></i></div>
                     <div class="menu-content">
                         <div class="menu-title">Datos personales</div>
                         <div class="menu-subtitle">Actualiza tus datos personales</div>
@@ -394,7 +516,7 @@
                 <h3 class="section-title-small">Acciones y acuerdos</h3>
                 
                 <div class="profile-menu-item">
-                    <div class="menu-icon"><i class="fas fa-users"></i></div>
+                    <div class="menu-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></div>
                     <div class="menu-content">
                         <div class="menu-title">Invitaciones</div>
                         <div class="menu-subtitle">Envía y gestiona invitaciones</div>
@@ -403,7 +525,7 @@
                 </div>
 
                 <div class="profile-menu-item">
-                    <div class="menu-icon"><i class="fas fa-info-circle"></i></div>
+                    <div class="menu-icon"><i class="fa-solid fa-circle-info" aria-hidden="true"></i></div>
                     <div class="menu-content">
                         <div class="menu-title">Nuestros acuerdos</div>
                     </div>
@@ -411,7 +533,7 @@
                 </div>
 
                 <div class="profile-menu-item">
-                    <div class="menu-icon"><i class="far fa-star"></i></div>
+                    <div class="menu-icon"><i class="fa-regular fa-star" aria-hidden="true"></i></div>
                     <div class="menu-content">
                         <div class="menu-title">Valóranos</div>
                         <div class="menu-subtitle">Escribe una reseña de Play Store</div>
@@ -420,7 +542,7 @@
                 </div>
 
                 <div class="profile-menu-item">
-                    <div class="menu-icon"><i class="far fa-times-circle"></i></div>
+                    <div class="menu-icon"><i class="fa-regular fa-circle-xmark" aria-hidden="true"></i></div>
                     <div class="menu-content">
                         <div class="menu-title">Cerrar cuenta</div>
                         <div class="menu-subtitle">Cierra tu cuenta personal</div>
@@ -429,7 +551,7 @@
                 </div>
 
                 <div class="profile-menu-item">
-                    <div class="menu-icon"><i class="fas fa-sign-out-alt"></i></div>
+                    <div class="menu-icon"><i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i></div>
                     <div class="menu-content">
                         <div class="menu-title">Cerrar sesión</div>
                     </div>
@@ -492,195 +614,277 @@
             </div>
 
             <button class="google-pay-btn">
-                <span> <img src="images/cards.png" width="36" height="36">  </span>
                 <span>Agregar a <img src="images/G play.png" width="12" height="12"> Pay</span>
             </button>
 
+            <br>
+            <br>
             <div class="balance-label">Gestionar tarjeta</div>
+
+            <div class="profile-section">
+                
+                <div class="profile-menu-item">
+                    <div class="menu-icon"><i class="fa-solid fa-gear" aria-hidden="true"></i></div>
+                    <div class="menu-content">
+                        <div class="menu-title">Geetionar tarjeta</div>
+                    </div>
+                    <span class="menu-arrow">›</span>
+                </div>
+
+                <div class="profile-menu-item">
+                    <div class="menu-icon"><i class="fa-solid fa-unlock" aria-hidden="true"></i></div>
+                    <div class="menu-content">
+                        <div class="menu-title">Desbloquear PIN</div>
+                    </div>
+                    <span class="menu-arrow">›</span>
+                </div>
+
+                <div class="profile-menu-item">
+                    <div class="menu-icon"><i class="fa-solid fa-pen" aria-hidden="true"></i></div>
+                    <div class="menu-content">
+                        <div class="menu-title">Alias de la tarjeta</div>
+                    </div>
+                    <span class="menu-arrow">›</span>
+                </div>
+
+                <div class="profile-menu-item">
+                    <div class="menu-icon"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></div>
+                    <div class="menu-content">
+                        <div class="menu-title">Tus límites de gastos</div>                    </div>
+                    <span class="menu-arrow">›</span>
+                </div>
+
+
+                <div class="profile-menu-item">
+                    <div class="menu-icon"><i class="fa-solid fa-credit-card" aria-hidden="true"></i></div>
+                    <div class="menu-content">
+                        <div class="menu-title">Reemplazar tarjeta</div>
+                   </div>
+                    <span class="menu-arrow">›</span>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
 
         <!-- RECIPIENTS VIEW -->
-        <div id="recipients" class="view">
+        <div id="recipients" class="view recipients-view">
             <div class="recipients-header">
-                <h1 style="margin: 0;">Destinatarios</h1>
-                <button class="invite-btn">🎁 Invitar</button>
+                <h1 class="recipients-title">Destinatarios</h1>
+                <button class="invite-pill">
+                    <i class="fa-solid fa-gift" aria-hidden="true"></i>
+                    Invitar
+                </button>
             </div>
 
-            <button class="add-recipient-btn">Añadir destinatario</button>
+            <button class="add-recipient-pill">Añadir destinatario</button>
 
-            <div class="balance-label" style="margin-bottom: 16px;">Recientes</div>
+            <div class="recipients-subtitle">Recientes</div>
 
             <div class="recipients-grid">
-                <div class="recipient-item">
-                    <div class="recipient-avatar primary">↱</div>
+                <div class="recipient-chip">
+                    <div class="recipient-avatar-wrap">
+                        <div class="recipient-avatar recipient-photo">JG</div>
+                        <span class="recipient-badge">7</span>
+                    </div>
                     <div class="recipient-name">Juan G.</div>
                     <div class="recipient-handle">@juang1778</div>
                 </div>
-                <div class="recipient-item">
-                    <div class="recipient-avatar primary">↱</div>
+                <div class="recipient-chip">
+                    <div class="recipient-avatar-wrap">
+                        <div class="recipient-avatar recipient-photo">MT</div>
+                        <span class="recipient-badge">7</span>
+                    </div>
                     <div class="recipient-name">Marianna T.</div>
                     <div class="recipient-handle">@mariannat...</div>
                 </div>
-                <div class="recipient-item">
-                    <div class="recipient-avatar primary">D</div>
-                    <div style="font-size: 12px; margin-bottom: 4px;">🇺🇸</div>
+                <div class="recipient-chip">
+                    <div class="recipient-avatar-wrap">
+                        <div class="recipient-avatar recipient-initial">D</div>
+                        <span class="recipient-flag">🇺🇸</span>
+                    </div>
                     <div class="recipient-name">DolarApp</div>
                     <div class="recipient-handle">Lead Bank</div>
                 </div>
-                <div class="recipient-item">
-                    <div class="recipient-avatar secondary">LP</div>
+                <div class="recipient-chip">
+                    <div class="recipient-avatar-wrap">
+                        <div class="recipient-avatar recipient-initial">LP</div>
+                        <span class="recipient-badge">7</span>
+                    </div>
                     <div class="recipient-name">Leidy P.</div>
                     <div class="recipient-handle">@leidyjoha...</div>
                 </div>
-                <div class="recipient-item">
-                    <div class="recipient-avatar secondary">↱</div>
+                <div class="recipient-chip">
+                    <div class="recipient-avatar-wrap">
+                        <div class="recipient-avatar recipient-photo">MA</div>
+                        <span class="recipient-badge">7</span>
+                    </div>
                     <div class="recipient-name">MATIAS A.</div>
                     <div class="recipient-handle">@matiasa3...</div>
                 </div>
-                <div class="recipient-item">
-                    <div class="recipient-avatar secondary">US</div>
+                <div class="recipient-chip">
+                    <div class="recipient-avatar-wrap">
+                        <div class="recipient-avatar recipient-initial">US</div>
+                        <span class="recipient-flag">🇪🇺</span>
+                    </div>
                     <div class="recipient-name">UAB S.</div>
                     <div class="recipient-handle">Uab Instare...</div>
                 </div>
             </div>
 
-            <div class="tabs">
-                <button class="tab active">Todos</button>
-                <button class="tab">Mis cuentas</button>
-                <button class="search-btn">
-                    <span>🔍</span>
-                    <span>Buscar</span>
+            <div class="recipients-tabs">
+                <button class="recipients-tab active">Todos</button>
+                <button class="recipients-tab">Mis cuentas</button>
+                <button class="recipients-search">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    Buscar
                 </button>
             </div>
 
-            <div class="recipient-list-item">
-                <div class="recipient-list-info">
-                    <div class="recipient-list-avatar">D</div>
-                    <div style="display: flex; align-items: center; gap: 8px;">
-                        <span style="font-size: 14px;">🇺🇸</span>
-                        <div>
+            <div class="recipient-list">
+                <div class="recipient-list-item">
+                    <div class="recipient-list-info">
+                        <div class="recipient-list-avatar">D</div>
+                        <div class="recipient-list-details">
                             <div class="recipient-list-name">DolarApp</div>
-                            <div class="recipient-list-details">Lead Bank que termina en ··5627</div>
+                            <div class="recipient-list-meta">
+                                <span class="recipient-list-flag">🇺🇸</span>
+                                Lead Bank que termina en ··5627
+                            </div>
                         </div>
                     </div>
+                    <i class="fa-solid fa-chevron-right recipient-list-arrow" aria-hidden="true"></i>
                 </div>
-                <span style="color: #9ca3af;">›</span>
-            </div>
 
-            <div class="recipient-list-item">
-                <div class="recipient-list-info">
-                    <div class="recipient-list-avatar" style="background: #4b5563;"></div>
-                    <div>
-                        <div class="recipient-list-name">Juan Camilo García</div>
+                <div class="recipient-list-item">
+                    <div class="recipient-list-info">
+                        <div class="recipient-list-avatar">JG</div>
+                        <div class="recipient-list-details">
+                            <div class="recipient-list-name">Juan Camilo García</div>
+                            <div class="recipient-list-meta">Cuenta personal</div>
+                        </div>
                     </div>
+                    <i class="fa-solid fa-chevron-right recipient-list-arrow" aria-hidden="true"></i>
                 </div>
-                <span style="color: #9ca3af;">›</span>
             </div>
         </div>
 
         <!-- PAYMENTS VIEW -->
-        <div id="payments" class="view">
-            <h1>Pagos</h1>
+        <div id="payments" class="view payments-view">
+            <h1 class="payments-title">Pagos</h1>
 
             <div class="payments-actions">
-                <button class="action-btn primary">Enviar</button>
-                <button class="action-btn">Solicitar</button>
+                <button class="payments-pill payments-pill--primary">Enviar</button>
+                <button class="payments-pill payments-pill--secondary">Solicitar</button>
             </div>
 
-            <div class="payment-card">
-                <div class="payment-card-content">
-                    <div class="payment-icon-wrapper">
-                        <div class="payment-icon" style="background: #1e3a8a;">1️⃣</div>
-                        <div>
-                            <div class="payment-title">Pagos recurrentes con tarjeta</div>
-                            <div class="payment-subtitle">4 activos</div>
-                        </div>
+            <div class="payments-card payments-card--highlight">
+                <div class="payments-card-info">
+                    <div class="payments-icon">
+                        <img src="images/google one.png" alt="Google One" width="36" height="36">
                     </div>
-                    <span style="color: #9ca3af;">›</span>
+                    <div>
+                        <div class="payments-card-title">Pagos recurrentes con tarjeta</div>
+                        <div class="payments-card-subtitle">4 activos</div>
+                    </div>
                 </div>
+                <i class="fa-solid fa-chevron-right payments-card-arrow" aria-hidden="true"></i>
             </div>
 
-            <div class="payment-card">
-                <div class="payment-card-content">
-                    <div class="payment-icon-wrapper">
-                        <div class="payment-icon">
-                            ⇄
-                            <div class="payment-badge">+</div>
-                        </div>
-                        <div>
-                            <div class="payment-title">Transferencias programadas</div>
-                        </div>
+            <div class="payments-card">
+                <div class="payments-card-info">
+                    <div class="payments-icon circle">
+                        <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                        <span class="payments-icon-badge">+</span>
                     </div>
-                    <span style="color: #9ca3af;">›</span>
+                    <div>
+                        <div class="payments-card-title">Transferencias programadas</div>
+                        <div class="payments-card-subtitle">Configura una transferencia para enviarla más tarde.</div>
+                    </div>
                 </div>
-                <div class="payment-description">Configura una transferencia para enviarla más tarde.</div>
+                <i class="fa-solid fa-chevron-right payments-card-arrow" aria-hidden="true"></i>
             </div>
 
-            <div class="payment-card">
-                <div class="payment-card-content">
-                    <div class="payment-icon-wrapper">
-                        <div class="payment-icon">
-                            🔄
-                            <div class="payment-badge">+</div>
-                        </div>
-                        <div>
-                            <div class="payment-title">Domiciliación de pagos</div>
-                        </div>
+            <div class="payments-card">
+                <div class="payments-card-info">
+                    <div class="payments-icon circle">
+                        <i class="fa-solid fa-rotate" aria-hidden="true"></i>
+                        <span class="payments-icon-badge">+</span>
                     </div>
-                    <span style="color: #9ca3af;">›</span>
+                    <div>
+                        <div class="payments-card-title">Domiciliación de pagos</div>
+                        <div class="payments-card-subtitle">Configura y gestiona pagos regulares.</div>
+                    </div>
                 </div>
-                <div class="payment-description">Configura y gestiona pagos regulares.</div>
+                <i class="fa-solid fa-chevron-right payments-card-arrow" aria-hidden="true"></i>
             </div>
 
-            <div class="payment-card">
-                <div class="payment-card-content">
-                    <div class="payment-icon-wrapper">
-                        <div class="payment-icon">
-                            📄
-                            <div class="payment-badge">+</div>
-                        </div>
-                        <div>
-                            <div class="payment-title">Solicitudes de pago</div>
-                        </div>
+            <div class="payments-card">
+                <div class="payments-card-info">
+                    <div class="payments-icon circle">
+                        <i class="fa-regular fa-money-bill-1" aria-hidden="true"></i>
+                        <span class="payments-icon-badge">+</span>
                     </div>
-                    <span style="color: #9ca3af;">›</span>
+                    <div>
+                        <div class="payments-card-title">Solicitudes de pago</div>
+                        <div class="payments-card-subtitle">Crea y gestiona los pagos que has solicitado.</div>
+                    </div>
                 </div>
-                <div class="payment-description">Crea y gestiona los pagos que has solicitado.</div>
+                <i class="fa-solid fa-chevron-right payments-card-arrow" aria-hidden="true"></i>
             </div>
 
-            <div class="payment-card highlight">
-                <div class="payment-card-content">
-                    <div class="payment-icon-wrapper">
-                        <div class="payment-icon">
-                            👥
-                            <div class="payment-badge">+</div>
-                        </div>
-                        <div>
-                            <div class="payment-title">Cuentas divididas</div>
-                        </div>
+            <div class="payments-card">
+                <div class="payments-card-info">
+                    <div class="payments-icon circle">
+                        <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+                        <span class="payments-icon-badge">+</span>
                     </div>
-                    <span style="color: #9ca3af;">›</span>
+                    <div>
+                        <div class="payments-card-title">Cuentas divididas</div>
+                        <div class="payments-card-subtitle">Divide una transacción con varias personas.</div>
+                    </div>
                 </div>
-                <div class="payment-description">Divide una transacción con varias personas.</div>
+                <i class="fa-solid fa-chevron-right payments-card-arrow" aria-hidden="true"></i>
             </div>
         </div>
 
         <!-- BOTTOM NAVIGATION -->
         <div class="bottom-nav">  
             <button class="nav-item active" onclick="showView('dashboard')">
-                <span class="nav-icon"> <img src="images/home.png" width="24" height="24"></span>
+                <span class="nav-icon">
+                    <i class="fas fa-house-user"></i>
+                </span>
                 <span class="nav-label">Inicio</span>
             </button>
             <button class="nav-item" onclick="showView('cards')">
-                <span class="nav-icon"> <img src="images/cards.png" width="24" height="24"></span>
+                <span class="nav-icon"> 
+                    <i class="far fa-credit-card"></i>
+                </span>
                 <span class="nav-label">Tarjetas</span>
             </button>
             <button class="nav-item" onclick="showView('recipients')">
-                <span class="nav-icon"> <img src="images/destinatarios.png" width="24" height="24"></span>
+                <span class="nav-icon">
+                    <i class="fas fa-users"></i>
+                </span>
                 <span class="nav-label">Destinatarios</span>
             </button>
             <button class="nav-item" onclick="showView('payments')">
-                <span class="nav-icon"> <img src="images/double-arrow.png" width="24" height="24"></span>
+                <span class="nav-icon"> 
+                    <i class="fas fa-expand-alt"></i>
+                </span>
                 <span class="nav-label">Pagos</span>
             </button>
         </div> 
