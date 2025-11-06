@@ -89,7 +89,7 @@
             <div class="balance-section">
                 <div class="balance-label">Saldo total</div>
                 <div class="balance-amount">
-                    12.374,82 EUR
+                    12.232,62 EUR
                     <span class="trend-icon"><i class="fa-solid fa-signal" aria-hidden="true"></i></span>
                 </div>
             </div>
@@ -111,7 +111,7 @@
                     <div class="currency-account">
                         <i class="fa-solid fa-building-columns" aria-hidden="true"></i> ·· 6 2458
                     </div>
-                    <div class="currency-amount">10.114,32</div>
+                    <div class="currency-amount">4062.68</div>
                 </div>
                 <div class="currency-card">
                     <div class="currency-header">
@@ -123,13 +123,13 @@
                     <div class="currency-account">
                         <i class="fa-solid fa-building-columns" aria-hidden="true"></i> ·· 9 7410
                     </div>
-                    <div class="currency-amount">260,54</div>
+                    <div class="currency-amount">7560,54</div>
                 </div>
             </div>
 
             <div class="section-header">
                 <h2 class="section-title">Transacciones</h2>
-                <button class="view-all">Ver todo</button>
+                <button class="view-all" onclick="showView('transactions-full')">Ver todo</button>
             </div>
 
             <div class="transaction-list">
@@ -399,6 +399,31 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- TRANSACTIONS FULL VIEW -->
+        <div id="transactions-full" class="view transactions-view">
+            <button class="close-btn" aria-label="Cerrar listado completo de transacciones" onclick="showView('dashboard')">✕</button>
+            
+            <div class="transactions-view-headline">
+                <h2 class="transactions-view-title">Transacciones</h2>
+                <div class="transactions-view-actions">
+                    <button class="transactions-action-btn" type="button">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    </button>
+                    <button class="transactions-action-btn" type="button">
+                        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="transactions-filters">
+                <button class="transactions-filter active" type="button">Incluir la actividad oculta</button>
+                <button class="transactions-filter" type="button">Tipo</button>
+                <button class="transactions-filter" type="button">Divisa</button>
+            </div>
+
+            <div class="transaction-list transactions-full-list" id="all-transactions"></div>
         </div>
 
         <!-- PROFILE/SETTINGS VIEW -->

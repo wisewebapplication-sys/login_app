@@ -1200,6 +1200,107 @@
     color: #9ca3af;
 }
 
+/* TRANSACTIONS FULL VIEW */
+.transactions-view {
+    background: #1a1a1a;
+    position: relative;
+    padding-top: 96px;
+}
+
+.transactions-view .close-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(159, 232, 112, 0.12);
+    border: 1px solid rgba(159, 232, 112, 0.35);
+    color: #9fe870;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.transactions-view-headline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.transactions-view-title {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.transactions-view-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.transactions-action-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #111827;
+    border: 1px solid #1f2937;
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.transactions-action-btn:hover {
+    background: #1f2937;
+    color: #d1d5db;
+}
+
+.transactions-filters {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.transactions-filter {
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: #111827;
+    border: 1px solid #1f2937;
+    color: #9ca3af;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.transactions-filter.active,
+.transactions-filter:hover {
+    background: rgba(159, 232, 112, 0.12);
+    border-color: rgba(159, 232, 112, 0.35);
+    color: #9fe870;
+}
+
+.transactions-full-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 40px;
+}
+
+.transactions-full-list .transaction-item {
+    margin-right: 0;
+}
+
+.transactions-section-label {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6b7280;
+    margin: 8px 0 4px;
+}
+
 /* PROFILE VIEW */
 .profile-view {
     background: #1a1a1a;
