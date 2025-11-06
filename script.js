@@ -95,7 +95,7 @@ function togglePassword() {
 document.addEventListener('DOMContentLoaded', function() {
     console.log('📱 Página cargada - Inicializando...');
 
-    const requiredViews = ['login', 'verification', 'dashboard', 'cards', 'recipients', 'payments'];
+    const requiredViews = ['login', 'verification', 'dashboard', 'cards', 'recipients', 'payments', 'profile'];
     requiredViews.forEach(id => {
         const view = document.getElementById(id);
         if (view) {
