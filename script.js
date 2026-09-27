@@ -175,6 +175,1079 @@ function getAllTransactions() {
 function getStatementTransactions() {
     return [
         {
+            date: '2026-09-26',
+            title: 'Walmart Pincher Creek',
+            dateLabel: 'Sábado, 26 de septiembre de 2026',
+            amountPrimary: '8,04 CAD',
+            amountSecondary: '5,01 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-26',
+            title: 'PayPal *Mrs_boz',
+            dateLabel: 'Sábado, 26 de septiembre de 2026',
+            amountPrimary: '1,00 USD',
+            amountSecondary: '0,89 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-26',
+            title: 'Walmart Pincher Creek',
+            dateLabel: 'Sábado, 26 de septiembre de 2026',
+            amountPrimary: '17,92 CAD',
+            amountSecondary: '11,17 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-25',
+            title: 'Walmart Supercenter Pincher Creek',
+            dateLabel: 'Viernes, 25 de septiembre de 2026',
+            amountPrimary: '48,79 CAD',
+            amountSecondary: '30,42 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-25',
+            title: 'Nayax Canada',
+            dateLabel: 'Viernes, 25 de septiembre de 2026',
+            amountPrimary: '1,00 CAD',
+            amountSecondary: '0,63 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-25',
+            title: 'Nayax Canada',
+            dateLabel: 'Viernes, 25 de septiembre de 2026',
+            amountPrimary: '3,00 CAD',
+            amountSecondary: '1,87 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-25',
+            title: 'Nayax Canada',
+            dateLabel: 'Viernes, 25 de septiembre de 2026',
+            amountPrimary: '10,00 CAD',
+            amountSecondary: '6,23 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-25',
+            title: 'Nayax Canada',
+            dateLabel: 'Viernes, 25 de septiembre de 2026',
+            amountPrimary: '4,00 CAD',
+            amountSecondary: '2,49 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-25',
+            title: 'Nayax Canada',
+            dateLabel: 'Viernes, 25 de septiembre de 2026',
+            amountPrimary: '6,00 CAD',
+            amountSecondary: '3,74 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-25',
+            title: 'No Frills High River',
+            dateLabel: 'Viernes, 25 de septiembre de 2026',
+            amountPrimary: '21,72 CAD',
+            amountSecondary: '13,54 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-25',
+            title: 'Deel, Inc.',
+            dateLabel: 'Viernes, 25 de septiembre de 2026',
+            amountPrimary: '+ 173,00 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-24',
+            title: 'Dollarama High River',
+            dateLabel: 'Jueves, 24 de septiembre de 2026',
+            amountPrimary: '10,76 CAD',
+            amountSecondary: '6,72 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-22',
+            title: 'Canadian Tire Okotoks',
+            dateLabel: 'Martes, 22 de septiembre de 2026',
+            amountPrimary: '20,98 CAD',
+            amountSecondary: '13,08 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-22',
+            title: 'Walmart Supercenter Okotoks',
+            dateLabel: 'Martes, 22 de septiembre de 2026',
+            amountPrimary: '130,41 CAD',
+            amountSecondary: '81,34 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-22',
+            title: 'Petro-Canada Aldersyde',
+            dateLabel: 'Martes, 22 de septiembre de 2026',
+            amountPrimary: '3,15 CAD',
+            amountSecondary: '1,97 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-22',
+            title: 'Petro-Canada Aldersyde',
+            dateLabel: 'Martes, 22 de septiembre de 2026',
+            amountPrimary: '150,00 CAD',
+            amountSecondary: '93,57 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-21',
+            title: 'Tim Hortons Calgary',
+            dateLabel: 'Lunes, 21 de septiembre de 2026',
+            amountPrimary: '7,65 CAD',
+            amountSecondary: '4,77 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-mug-saucer',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-21',
+            title: 'Tim Hortons Calgary',
+            dateLabel: 'Lunes, 21 de septiembre de 2026',
+            amountPrimary: '14,30 CAD',
+            amountSecondary: '8,93 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-mug-saucer',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-21',
+            title: 'Tim Hortons Calgary',
+            dateLabel: 'Lunes, 21 de septiembre de 2026',
+            amountPrimary: '8,45 CAD',
+            amountSecondary: '5,27 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-mug-saucer',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-21',
+            title: 'Tim Hortons Calgary',
+            dateLabel: 'Lunes, 21 de septiembre de 2026',
+            amountPrimary: '6,00 CAD',
+            amountSecondary: '3,75 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-mug-saucer',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-18',
+            title: 'Walmart Supercenter Calgary',
+            dateLabel: 'Viernes, 18 de septiembre de 2026',
+            amountPrimary: '40,00 CAD',
+            amountSecondary: '24,99 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-17',
+            title: 'Wendy\'s Calgary',
+            dateLabel: 'Jueves, 17 de septiembre de 2026',
+            amountPrimary: '35,68 CAD',
+            amountSecondary: '22,31 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-17',
+            title: 'Walmart Supercenter Calgary',
+            dateLabel: 'Jueves, 17 de septiembre de 2026',
+            amountPrimary: '53,75 CAD',
+            amountSecondary: '33,62 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-17',
+            title: 'Deel, Inc.',
+            dateLabel: 'Jueves, 17 de septiembre de 2026',
+            amountPrimary: '+ 275,77 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-15',
+            title: 'Shell Canmore',
+            dateLabel: 'Martes, 15 de septiembre de 2026',
+            amountPrimary: '141,27 CAD',
+            amountSecondary: '88,33 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-15',
+            title: 'Save On Foods Canmore',
+            dateLabel: 'Martes, 15 de septiembre de 2026',
+            amountPrimary: '45,01 CAD',
+            amountSecondary: '28,14 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-14',
+            title: 'Canva',
+            dateLabel: 'Lunes, 14 de septiembre de 2026',
+            amountPrimary: '1,39 CAD',
+            amountSecondary: '0,88 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-13',
+            title: 'Google One -',
+            dateLabel: 'Domingo, 13 de septiembre de 2026',
+            amountPrimary: '1,99 USD',
+            amountSecondary: '1,73 EUR',
+            isPositive: false,
+            iconType: 'image',
+            iconSrc: 'images/google one.png',
+            iconBg: '#ffffff'
+        },
+        {
+            date: '2026-09-11',
+            title: 'Calgary Co-op Wines & Spirits',
+            dateLabel: 'Viernes, 11 de septiembre de 2026',
+            amountPrimary: '37,02 CAD',
+            amountSecondary: '23,10 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-11',
+            title: 'Walmart Supercenter Calgary',
+            dateLabel: 'Viernes, 11 de septiembre de 2026',
+            amountPrimary: '28,56 CAD',
+            amountSecondary: '17,82 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-11',
+            title: 'Tim Hortons Calgary',
+            dateLabel: 'Viernes, 11 de septiembre de 2026',
+            amountPrimary: '2,95 CAD',
+            amountSecondary: '1,84 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-mug-saucer',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-11',
+            title: 'Tim Hortons Calgary',
+            dateLabel: 'Viernes, 11 de septiembre de 2026',
+            amountPrimary: '19,16 CAD',
+            amountSecondary: '11,96 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-mug-saucer',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-10',
+            title: 'Popeyes Calgary',
+            dateLabel: 'Jueves, 10 de septiembre de 2026',
+            amountPrimary: '27,07 CAD',
+            amountSecondary: '16,92 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-10',
+            title: 'Chevron Calgary',
+            dateLabel: 'Jueves, 10 de septiembre de 2026',
+            amountPrimary: '6,69 CAD',
+            amountSecondary: '4,18 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-10',
+            title: 'Super 8 Macleod Trail Calgary',
+            dateLabel: 'Jueves, 10 de septiembre de 2026',
+            amountPrimary: '100,00 CAD',
+            amountSecondary: '62,53 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-bed',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-10',
+            title: 'Booking.com',
+            dateLabel: 'Jueves, 10 de septiembre de 2026',
+            amountPrimary: '80,67 CAD',
+            amountSecondary: '50,45 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-bed',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-10',
+            title: 'Tim Hortons Calgary',
+            dateLabel: 'Jueves, 10 de septiembre de 2026',
+            amountPrimary: '15,34 CAD',
+            amountSecondary: '9,59 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-mug-saucer',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-10',
+            title: 'Tim Hortons Calgary',
+            dateLabel: 'Jueves, 10 de septiembre de 2026',
+            amountPrimary: '0,83 CAD',
+            amountSecondary: '0,53 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-mug-saucer',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-09',
+            title: 'Tim Hortons Calgary',
+            dateLabel: 'Miércoles, 9 de septiembre de 2026',
+            amountPrimary: '3,34 CAD',
+            amountSecondary: '2,09 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-mug-saucer',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-09',
+            title: 'Tim Hortons Calgary',
+            dateLabel: 'Miércoles, 9 de septiembre de 2026',
+            amountPrimary: '17,83 CAD',
+            amountSecondary: '11,15 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-mug-saucer',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-09-08',
+            title: 'Calgary Parking',
+            dateLabel: 'Martes, 8 de septiembre de 2026',
+            amountPrimary: '2,00 CAD',
+            amountSecondary: '1,26 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-square-parking',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-31',
+            title: 'Walmart Supercenter Drayton Valley',
+            dateLabel: 'Lunes, 31 de agosto de 2026',
+            amountPrimary: '23,96 CAD',
+            amountSecondary: '14,95 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-30',
+            title: 'Shell Grande Prairie',
+            dateLabel: 'Domingo, 30 de agosto de 2026',
+            amountPrimary: '150,00 CAD',
+            amountSecondary: '93,49 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-30',
+            title: 'Wendy\'s Dawson Creek',
+            dateLabel: 'Domingo, 30 de agosto de 2026',
+            amountPrimary: '34,98 CAD',
+            amountSecondary: '21,81 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-30',
+            title: 'Walmart Supercenter Dawson Creek',
+            dateLabel: 'Domingo, 30 de agosto de 2026',
+            amountPrimary: '106,46 CAD',
+            amountSecondary: '66,37 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-30',
+            title: 'Dawson Creek Visitor Centre',
+            dateLabel: 'Domingo, 30 de agosto de 2026',
+            amountPrimary: '3,74 CAD',
+            amountSecondary: '2,33 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-30',
+            title: 'Deel, Inc.',
+            dateLabel: 'Domingo, 30 de agosto de 2026',
+            amountPrimary: '+ 425,55 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-29',
+            title: 'Save On Foods Fort Nelson',
+            dateLabel: 'Sábado, 29 de agosto de 2026',
+            amountPrimary: '38,08 CAD',
+            amountSecondary: '23,75 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-29',
+            title: 'Fort Nelson District Chamber',
+            dateLabel: 'Sábado, 29 de agosto de 2026',
+            amountPrimary: '9,46 CAD',
+            amountSecondary: '5,89 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-29',
+            title: 'Chevron Fort Nelson',
+            dateLabel: 'Sábado, 29 de agosto de 2026',
+            amountPrimary: '150,00 CAD',
+            amountSecondary: '93,55 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-28',
+            title: 'McDonald\'s Fort Nelson',
+            dateLabel: 'Viernes, 28 de agosto de 2026',
+            amountPrimary: '19,61 CAD',
+            amountSecondary: '12,23 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-24',
+            title: 'Northern Lights Centre Watson Lake',
+            dateLabel: 'Lunes, 24 de agosto de 2026',
+            amountPrimary: '34,00 CAD',
+            amountSecondary: '21,14 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-24',
+            title: 'Junction 37 Watson Lake',
+            dateLabel: 'Lunes, 24 de agosto de 2026',
+            amountPrimary: '44,77 CAD',
+            amountSecondary: '27,84 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-23',
+            title: 'Deel, Inc.',
+            dateLabel: 'Domingo, 23 de agosto de 2026',
+            amountPrimary: '+ 168,85 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-23',
+            title: 'Save On Foods Whitehorse',
+            dateLabel: 'Domingo, 23 de agosto de 2026',
+            amountPrimary: '24,66 CAD',
+            amountSecondary: '15,40 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-23',
+            title: 'Dollarama Whitehorse',
+            dateLabel: 'Domingo, 23 de agosto de 2026',
+            amountPrimary: '10,23 CAD',
+            amountSecondary: '6,39 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-21',
+            title: 'Dollarama Whitehorse',
+            dateLabel: 'Viernes, 21 de agosto de 2026',
+            amountPrimary: '10,92 CAD',
+            amountSecondary: '6,82 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-21',
+            title: 'McDonald\'s Whitehorse',
+            dateLabel: 'Viernes, 21 de agosto de 2026',
+            amountPrimary: '26,01 CAD',
+            amountSecondary: '16,25 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-21',
+            title: 'Top Spot Haines Junction',
+            dateLabel: 'Viernes, 21 de agosto de 2026',
+            amountPrimary: '100,00 CAD',
+            amountSecondary: '62,49 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-18',
+            title: 'Three Bears Wasilla',
+            dateLabel: 'Martes, 18 de agosto de 2026',
+            amountPrimary: '3,88 USD',
+            amountSecondary: '3,36 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-18',
+            title: 'Chevron Tok',
+            dateLabel: 'Martes, 18 de agosto de 2026',
+            amountPrimary: '61,04 USD',
+            amountSecondary: '52,96 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-16',
+            title: 'Walmart Supercenter Fairbanks',
+            dateLabel: 'Domingo, 16 de agosto de 2026',
+            amountPrimary: '57,12 USD',
+            amountSecondary: '49,59 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-16',
+            title: 'Deel, Inc.',
+            dateLabel: 'Domingo, 16 de agosto de 2026',
+            amountPrimary: '+ 170,46 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-15',
+            title: 'Walmart Supercenter Fairbanks',
+            dateLabel: 'Sábado, 15 de agosto de 2026',
+            amountPrimary: '201,37 USD',
+            amountSecondary: '174,84 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-15',
+            title: 'Fairbanks Laundry',
+            dateLabel: 'Sábado, 15 de agosto de 2026',
+            amountPrimary: '10,00 USD',
+            amountSecondary: '8,68 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-shirt',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-15',
+            title: 'Fairbanks Laundry',
+            dateLabel: 'Sábado, 15 de agosto de 2026',
+            amountPrimary: '15,00 USD',
+            amountSecondary: '13,02 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-shirt',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-15',
+            title: 'The Home Depot Fairbanks',
+            dateLabel: 'Sábado, 15 de agosto de 2026',
+            amountPrimary: '58,10 USD',
+            amountSecondary: '50,46 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-15',
+            title: 'Three Bears Fairbanks',
+            dateLabel: 'Sábado, 15 de agosto de 2026',
+            amountPrimary: '8,38 USD',
+            amountSecondary: '7,27 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-15',
+            title: 'Tesoro Healy',
+            dateLabel: 'Sábado, 15 de agosto de 2026',
+            amountPrimary: '83,31 USD',
+            amountSecondary: '72,35 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-14',
+            title: '49th State Brewing Healy',
+            dateLabel: 'Viernes, 14 de agosto de 2026',
+            amountPrimary: '16,70 USD',
+            amountSecondary: '14,50 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-14',
+            title: '49th State Brewing Healy',
+            dateLabel: 'Viernes, 14 de agosto de 2026',
+            amountPrimary: '36,73 USD',
+            amountSecondary: '31,90 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-14',
+            title: 'Domino\'s Anchorage',
+            dateLabel: 'Viernes, 14 de agosto de 2026',
+            amountPrimary: '10,98 USD',
+            amountSecondary: '9,53 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-13',
+            title: 'Deel, Inc.',
+            dateLabel: 'Jueves, 13 de agosto de 2026',
+            amountPrimary: '+ 288,19 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-13',
+            title: 'Google One -',
+            dateLabel: 'Jueves, 13 de agosto de 2026',
+            amountPrimary: '1,99 USD',
+            amountSecondary: '1,74 EUR',
+            isPositive: false,
+            iconType: 'image',
+            iconSrc: 'images/google one.png',
+            iconBg: '#ffffff'
+        },
+        {
+            date: '2026-08-10',
+            title: 'Fred-Meyer Soldotna',
+            dateLabel: 'Lunes, 10 de agosto de 2026',
+            amountPrimary: '14,82 USD',
+            amountSecondary: '12,90 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-10',
+            title: 'Circle K Soldotna',
+            dateLabel: 'Lunes, 10 de agosto de 2026',
+            amountPrimary: '100,00 USD',
+            amountSecondary: '87,03 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-09',
+            title: 'McDonald\'s Homer',
+            dateLabel: 'Domingo, 9 de agosto de 2026',
+            amountPrimary: '14,87 USD',
+            amountSecondary: '12,93 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-09',
+            title: 'Safeway Homer',
+            dateLabel: 'Domingo, 9 de agosto de 2026',
+            amountPrimary: '16,86 USD',
+            amountSecondary: '14,66 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-08',
+            title: 'Safeway Homer',
+            dateLabel: 'Sábado, 8 de agosto de 2026',
+            amountPrimary: '22,47 USD',
+            amountSecondary: '19,53 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-08',
+            title: 'Rainbow Tours',
+            dateLabel: 'Sábado, 8 de agosto de 2026',
+            amountPrimary: '32,14 USD',
+            amountSecondary: '27,93 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-08-01',
+            title: 'Google Cloud',
+            dateLabel: 'Sábado, 1 de agosto de 2026',
+            amountPrimary: '0,01 USD',
+            amountSecondary: '0,02 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-31',
+            title: 'Marathon Glennallen',
+            dateLabel: 'Viernes, 31 de julio de 2026',
+            amountPrimary: '100,00 USD',
+            amountSecondary: '87,14 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-31',
+            title: 'McDonald\'s North Pole',
+            dateLabel: 'Viernes, 31 de julio de 2026',
+            amountPrimary: '10,87 USD',
+            amountSecondary: '9,46 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-31',
+            title: 'Shell Fairbanks',
+            dateLabel: 'Viernes, 31 de julio de 2026',
+            amountPrimary: '100,00 USD',
+            amountSecondary: '87,25 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-30',
+            title: 'Domino\'s Fairbanks',
+            dateLabel: 'Jueves, 30 de julio de 2026',
+            amountPrimary: '15,98 USD',
+            amountSecondary: '13,95 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-30',
+            title: 'Walmart Fairbanks',
+            dateLabel: 'Jueves, 30 de julio de 2026',
+            amountPrimary: '12,46 USD',
+            amountSecondary: '10,87 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-30',
+            title: 'Walmart Supercenter Fairbanks',
+            dateLabel: 'Jueves, 30 de julio de 2026',
+            amountPrimary: '19,32 USD',
+            amountSecondary: '16,86 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-30',
+            title: 'Fred Meyer Fairbanks',
+            dateLabel: 'Jueves, 30 de julio de 2026',
+            amountPrimary: '33,48 USD',
+            amountSecondary: '29,20 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-30',
+            title: 'The Home Depot Fairbanks',
+            dateLabel: 'Jueves, 30 de julio de 2026',
+            amountPrimary: '24,96 USD',
+            amountSecondary: '21,76 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-30',
+            title: 'Hilltop Sourdough Fuel Fairbanks',
+            dateLabel: 'Jueves, 30 de julio de 2026',
+            amountPrimary: '40,00 USD',
+            amountSecondary: '34,86 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-30',
+            title: 'Deel, Inc.',
+            dateLabel: 'Jueves, 30 de julio de 2026',
+            amountPrimary: '+ 513,05 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-29',
+            title: 'Coldfoot Camp',
+            dateLabel: 'Miércoles, 29 de julio de 2026',
+            amountPrimary: '20,01 USD',
+            amountSecondary: '17,54 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-29',
+            title: 'Coldfoot Camp',
+            dateLabel: 'Miércoles, 29 de julio de 2026',
+            amountPrimary: '41,30 USD',
+            amountSecondary: '36,42 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-27',
+            title: 'Brooks Range Supply Prudhoe Bay',
+            dateLabel: 'Lunes, 27 de julio de 2026',
+            amountPrimary: '7,65 USD',
+            amountSecondary: '6,75 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-27',
+            title: 'Brooks Range Supply Prudhoe Bay',
+            dateLabel: 'Lunes, 27 de julio de 2026',
+            amountPrimary: '6,30 USD',
+            amountSecondary: '5,56 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-23',
+            title: 'Coldfoot Camp',
+            dateLabel: 'Jueves, 23 de julio de 2026',
+            amountPrimary: '19,99 USD',
+            amountSecondary: '17,65 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-23',
+            title: 'Coldfoot Camp',
+            dateLabel: 'Jueves, 23 de julio de 2026',
+            amountPrimary: '57,70 USD',
+            amountSecondary: '50,95 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-20',
+            title: 'Speedway Fairbanks',
+            dateLabel: 'Lunes, 20 de julio de 2026',
+            amountPrimary: '100,00 USD',
+            amountSecondary: '88,01 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-20',
+            title: 'Speedway Fairbanks',
+            dateLabel: 'Lunes, 20 de julio de 2026',
+            amountPrimary: '100,00 USD',
+            amountSecondary: '88,01 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-20',
+            title: 'McDonald\'s Fairbanks',
+            dateLabel: 'Lunes, 20 de julio de 2026',
+            amountPrimary: '26,10 USD',
+            amountSecondary: '22,97 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-20',
+            title: 'Deel, Inc.',
+            dateLabel: 'Lunes, 20 de julio de 2026',
+            amountPrimary: '+ 172,77 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-20',
+            title: 'Walmart Supercenter Fairbanks',
+            dateLabel: 'Lunes, 20 de julio de 2026',
+            amountPrimary: '9,06 USD',
+            amountSecondary: '7,97 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-20',
+            title: 'Walmart Fairbanks',
+            dateLabel: 'Lunes, 20 de julio de 2026',
+            amountPrimary: '137,24 USD',
+            amountSecondary: '120,81 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-20',
+            title: 'The Home Depot Fairbanks',
+            dateLabel: 'Lunes, 20 de julio de 2026',
+            amountPrimary: '23,04 USD',
+            amountSecondary: '20,28 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-20',
+            title: 'Three Bears Fairbanks',
+            dateLabel: 'Lunes, 20 de julio de 2026',
+            amountPrimary: '18,75 USD',
+            amountSecondary: '16,51 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-18',
+            title: 'Tesoro Healy',
+            dateLabel: 'Sábado, 18 de julio de 2026',
+            amountPrimary: '100,00 USD',
+            amountSecondary: '87,82 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-18',
+            title: 'Anyone Ai - Ml Career Anyoneai.Com',
+            dateLabel: 'Sábado, 18 de julio de 2026',
+            amountPrimary: '28,90 USD',
+            amountSecondary: '25,38 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-graduation-cap',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-07-18',
+            title: 'Deel, Inc.',
+            dateLabel: 'Sábado, 18 de julio de 2026',
+            amountPrimary: '+ 344,76 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
             date: '2026-06-30',
             title: 'Three Bears Wasilla',
             dateLabel: 'Martes, 30 de junio de 2026',
@@ -803,6 +1876,204 @@ function getStatementTransactions() {
             title: 'Deel, Inc.',
             dateLabel: 'Viernes, 17 de abril de 2026',
             amountPrimary: '+ 75,98 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-03-31',
+            title: 'McDonald\'s Page',
+            dateLabel: 'Martes, 31 de marzo de 2026',
+            amountPrimary: '3,42 USD',
+            amountSecondary: '2,96 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-03-31',
+            title: 'Walmart Supercenter Page',
+            dateLabel: 'Martes, 31 de marzo de 2026',
+            amountPrimary: '2,60 USD',
+            amountSecondary: '2,26 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-03-30',
+            title: 'Walmart Supercenter Page',
+            dateLabel: 'Lunes, 30 de marzo de 2026',
+            amountPrimary: '4,30 USD',
+            amountSecondary: '3,77 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-03-30',
+            title: 'Walmart Supercenter Page',
+            dateLabel: 'Lunes, 30 de marzo de 2026',
+            amountPrimary: '5,38 USD',
+            amountSecondary: '4,71 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-03-30',
+            title: 'Burger King Kayenta',
+            dateLabel: 'Lunes, 30 de marzo de 2026',
+            amountPrimary: '9,80 USD',
+            amountSecondary: '8,59 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-burger',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-03-29',
+            title: 'Navajo Nation Monument Valley',
+            dateLabel: 'Domingo, 29 de marzo de 2026',
+            amountPrimary: '35,00 USD',
+            amountSecondary: '30,55 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-03-28',
+            title: 'Bashas\' Kayenta',
+            dateLabel: 'Sábado, 28 de marzo de 2026',
+            amountPrimary: '5,69 USD',
+            amountSecondary: '4,96 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-03-28',
+            title: 'Marathon Tuba City',
+            dateLabel: 'Sábado, 28 de marzo de 2026',
+            amountPrimary: '83,17 USD',
+            amountSecondary: '72,59 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-03-25',
+            title: 'NIUM * BOOT CAMP CHILE SPA',
+            dateLabel: 'Miércoles, 25 de marzo de 2026',
+            amountPrimary: '+ 62,86 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-03-23',
+            title: 'South Rim General Store Grand Canyon',
+            dateLabel: 'Lunes, 23 de marzo de 2026',
+            amountPrimary: '7,65 USD',
+            amountSecondary: '6,62 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-02-05',
+            title: 'Starbucks Tlacoquemécatl',
+            dateLabel: 'Jueves, 5 de febrero de 2026',
+            amountPrimary: '59,00 MXN',
+            amountSecondary: '2,90 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-mug-saucer',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-02-04',
+            title: 'Walmart Express Ciudad de México',
+            dateLabel: 'Miércoles, 4 de febrero de 2026',
+            amountPrimary: '270,16 MXN',
+            amountSecondary: '13,30 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-02-04',
+            title: 'Starbucks Tlacoquemécatl',
+            dateLabel: 'Miércoles, 4 de febrero de 2026',
+            amountPrimary: '149,00 MXN',
+            amountSecondary: '7,33 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-mug-saucer',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-02-04',
+            title: 'Oxxo Capulín',
+            dateLabel: 'Miércoles, 4 de febrero de 2026',
+            amountPrimary: '41,90 MXN',
+            amountSecondary: '2,06 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-02-04',
+            title: 'Farmacia México Centro',
+            dateLabel: 'Miércoles, 4 de febrero de 2026',
+            amountPrimary: '679,00 MXN',
+            amountSecondary: '33,44 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-prescription-bottle-medical',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-02-04',
+            title: 'Dr. Cln Ojos Ciudad de México',
+            dateLabel: 'Miércoles, 4 de febrero de 2026',
+            amountPrimary: '700,00 MXN',
+            amountSecondary: '34,51 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-prescription-bottle-medical',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-02-04',
+            title: 'Metrobús Ciudad de México',
+            dateLabel: 'Miércoles, 4 de febrero de 2026',
+            amountPrimary: '60,00 MXN',
+            amountSecondary: '2,96 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-bus',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-02-03',
+            title: 'Oxxo Cholula',
+            dateLabel: 'Martes, 3 de febrero de 2026',
+            amountPrimary: '78,00 MXN',
+            amountSecondary: '3,86 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-02-03',
+            title: 'Salón San Lorenzo',
+            dateLabel: 'Martes, 3 de febrero de 2026',
+            amountPrimary: '169,23 MXN',
+            amountSecondary: '8,35 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-02-01',
+            title: 'Deel, Inc.',
+            dateLabel: 'Domingo, 1 de febrero de 2026',
+            amountPrimary: '+ 748,73 EUR',
             isPositive: true,
             iconClass: 'fa-solid fa-arrow-down',
             iconBg: '#1f2937'
