@@ -1,0 +1,27 @@
+{
+  "name": "login_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "sync-www": "./sync-www.sh",
+    "build:android": "./sync-www.sh && npx cap sync android"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wisewebapplication-sys/login_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wisewebapplication-sys/login_app/issues"
+  },
+  "homepage": "https://github.com/wisewebapplication-sys/login_app#readme",
+  "dependencies": {
+    "@capacitor/android": "^6.2.2",
+    "@capacitor/cli": "^6.2.2",
+    "@capacitor/core": "^6.2.2",
+    "@fortawesome/fontawesome-free": "^7.3.1"
+  }
+}

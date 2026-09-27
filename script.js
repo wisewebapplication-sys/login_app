@@ -120,28 +120,815 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function setupTransactionsView() {
-    const summaryList = document.querySelector('.transaction-list');
+    const summaryList = document.querySelector('#dashboard .transaction-list');
     const fullListContainer = document.getElementById('all-transactions');
 
     if (!summaryList || !fullListContainer) {
-        console.warn('⚠️ No se pudo inicializar el listado completo de transacciones.');
+        console.warn('⚠️ No se pudo inicializar el listado de transacciones.');
         return;
     }
 
-    fullListContainer.innerHTML = summaryList.innerHTML;
+    const all = getAllTransactions();
+    all.forEach(t => { t._date = t.date ? new Date(t.date + 'T00:00:00') : parseSpanishDate(t.dateLabel); });
+    all.sort((a, b) => b._date - a._date); // descendente: la más reciente primero
 
-    const additionalTransactions = getStaticTransactions();
-    let lastSectionLabel = null;
+    // Resumen del inicio: las 12 transacciones más recientes
+    summaryList.innerHTML = '';
+    all.slice(0, 12).forEach(t => summaryList.appendChild(createTransactionElement(t)));
 
-    additionalTransactions.forEach(transaction => {
-        if (transaction.sectionLabel && transaction.sectionLabel !== lastSectionLabel) {
-            fullListContainer.appendChild(createSectionLabel(transaction.sectionLabel));
-            lastSectionLabel = transaction.sectionLabel;
+    // Listado completo, agrupado por mes
+    fullListContainer.innerHTML = '';
+    let lastLabel = null;
+    all.forEach(t => {
+        const label = monthLabelFromDate(t._date);
+        if (label && label !== lastLabel) {
+            fullListContainer.appendChild(createSectionLabel(label));
+            lastLabel = label;
         }
-        fullListContainer.appendChild(createTransactionElement(transaction));
+        fullListContainer.appendChild(createTransactionElement(t));
     });
 
-    console.log(`🧾 Se agregaron ${additionalTransactions.length} transacciones adicionales al listado completo.`);
+    console.log(`🧾 ${all.length} transacciones ordenadas de forma descendente.`);
+}
+
+const MESES_ES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+
+function parseSpanishDate(label) {
+    if (!label) return new Date(0);
+    const m = String(label).match(/(\d{1,2}) de (\w+) de (\d{4})/i);
+    if (!m) return new Date(0);
+    const mes = MESES_ES.indexOf(m[2].toLowerCase());
+    if (mes < 0) return new Date(0);
+    return new Date(Number(m[3]), mes, Number(m[1]));
+}
+
+function monthLabelFromDate(d) {
+    if (!(d instanceof Date) || isNaN(d)) return null;
+    const nombre = MESES_ES[d.getMonth()];
+    return nombre.charAt(0).toUpperCase() + nombre.slice(1) + ' ' + d.getFullYear();
+}
+
+function getAllTransactions() {
+    return [].concat(getLegacyDashboardItems(), getStatementTransactions(), getStaticTransactions());
+}
+
+function getStatementTransactions() {
+    return [
+        {
+            date: '2026-06-30',
+            title: 'Three Bears Wasilla',
+            dateLabel: 'Martes, 30 de junio de 2026',
+            amountPrimary: '59,05 USD',
+            amountSecondary: '51,95 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-30',
+            title: 'Three Bears Wasilla',
+            dateLabel: 'Martes, 30 de junio de 2026',
+            amountPrimary: '17,99 USD',
+            amountSecondary: '15,82 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-30',
+            title: 'Youngs Chevron Tok',
+            dateLabel: 'Martes, 30 de junio de 2026',
+            amountPrimary: '49,79 USD',
+            amountSecondary: '43,78 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-30',
+            title: 'Chevron Tok',
+            dateLabel: 'Martes, 30 de junio de 2026',
+            amountPrimary: '100,00 USD',
+            amountSecondary: '87,92 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-30',
+            title: 'Chevron Tok',
+            dateLabel: 'Martes, 30 de junio de 2026',
+            amountPrimary: '100,00 USD',
+            amountSecondary: '87,92 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-30',
+            title: 'Deel, Inc.',
+            dateLabel: 'Martes, 30 de junio de 2026',
+            amountPrimary: '+ 299,44 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-29',
+            title: 'Estación Motor In Beaver Creek',
+            dateLabel: 'Lunes, 29 de junio de 2026',
+            amountPrimary: '29,25 CAD',
+            amountSecondary: '18,09 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-28',
+            title: 'Estación Haines Fas Ga Haines Juncti',
+            dateLabel: 'Domingo, 28 de junio de 2026',
+            amountPrimary: '25,38 CAD',
+            amountSecondary: '15,75 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-28',
+            title: 'The Little Green Apple Haines Juncti',
+            dateLabel: 'Domingo, 28 de junio de 2026',
+            amountPrimary: '13,25 CAD',
+            amountSecondary: '8,22 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-25',
+            title: 'North 60 Petro Chillko Whitehorse',
+            dateLabel: 'Jueves, 25 de junio de 2026',
+            amountPrimary: '25,00 CAD',
+            amountSecondary: '15,56 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-25',
+            title: 'Canadian Tire Whitehorse',
+            dateLabel: 'Jueves, 25 de junio de 2026',
+            amountPrimary: '39,89 CAD',
+            amountSecondary: '24,82 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-25',
+            title: 'Walmart Store Whitehorse',
+            dateLabel: 'Jueves, 25 de junio de 2026',
+            amountPrimary: '182,21 CAD',
+            amountSecondary: '113,40 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-25',
+            title: 'Deel, Inc.',
+            dateLabel: 'Jueves, 25 de junio de 2026',
+            amountPrimary: '+ 86,70 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-24',
+            title: 'Yukon Motel & Restaur Teslin',
+            dateLabel: 'Miércoles, 24 de junio de 2026',
+            amountPrimary: '84,53 CAD',
+            amountSecondary: '52,52 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-bed',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-23',
+            title: 'Petro-Canada Dease Lake',
+            dateLabel: 'Martes, 23 de junio de 2026',
+            amountPrimary: '150,00 CAD',
+            amountSecondary: '93,14 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-23',
+            title: 'Deel, Inc.',
+            dateLabel: 'Martes, 23 de junio de 2026',
+            amountPrimary: '+ 199,24 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-19',
+            title: 'Safeway Smithers',
+            dateLabel: 'Viernes, 19 de junio de 2026',
+            amountPrimary: '21,87 CAD',
+            amountSecondary: '13,53 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-19',
+            title: 'Smithers Chev Smithers',
+            dateLabel: 'Viernes, 19 de junio de 2026',
+            amountPrimary: '75,00 CAD',
+            amountSecondary: '46,41 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-18',
+            title: 'Bon Voyage Gas & Groc Prince George',
+            dateLabel: 'Jueves, 18 de junio de 2026',
+            amountPrimary: '100,00 CAD',
+            amountSecondary: '61,99 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-18',
+            title: 'Best Buy Prince George',
+            dateLabel: 'Jueves, 18 de junio de 2026',
+            amountPrimary: '67,19 CAD',
+            amountSecondary: '41,66 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-18',
+            title: 'London Drugs 51 Prince George',
+            dateLabel: 'Jueves, 18 de junio de 2026',
+            amountPrimary: '8,95 CAD',
+            amountSecondary: '5,55 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-18',
+            title: 'London Drugs 51 Prince George',
+            dateLabel: 'Jueves, 18 de junio de 2026',
+            amountPrimary: '44,79 CAD',
+            amountSecondary: '27,77 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-18',
+            title: 'Walmart Supercenter Prince George',
+            dateLabel: 'Jueves, 18 de junio de 2026',
+            amountPrimary: '138,26 CAD',
+            amountSecondary: '85,65 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-17',
+            title: 'Deel, Inc.',
+            dateLabel: 'Miércoles, 17 de junio de 2026',
+            amountPrimary: '+ 145,18 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-15',
+            title: 'Walmart Supercenter Prince George',
+            dateLabel: 'Lunes, 15 de junio de 2026',
+            amountPrimary: '174,63 CAD',
+            amountSecondary: '108,12 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-15',
+            title: 'Anyone Ai - Ml Career Anyoneai.Com',
+            dateLabel: 'Lunes, 15 de junio de 2026',
+            amountPrimary: '250,00 USD',
+            amountSecondary: '216,28 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-graduation-cap',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-15',
+            title: 'Deel, Inc.',
+            dateLabel: 'Lunes, 15 de junio de 2026',
+            amountPrimary: '+ 424,49 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-14',
+            title: 'Ashcroft Travel Centre Ashcroft',
+            dateLabel: 'Domingo, 14 de junio de 2026',
+            amountPrimary: '100,00 CAD',
+            amountSecondary: '61,96 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-bed',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-14',
+            title: 'Hope S.K.T. Farmers Ma Hope',
+            dateLabel: 'Domingo, 14 de junio de 2026',
+            amountPrimary: '20,87 CAD',
+            amountSecondary: '12,94 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-13',
+            title: 'Starbucks Vancouver',
+            dateLabel: 'Sábado, 13 de junio de 2026',
+            amountPrimary: '15,18 CAD',
+            amountSecondary: '9,42 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-mug-saucer',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-13',
+            title: 'Compass Account Burnab Burnaby',
+            dateLabel: 'Sábado, 13 de junio de 2026',
+            amountPrimary: '6,60 CAD',
+            amountSecondary: '4,10 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-bus',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-13',
+            title: 'Compass Account Burnab Burnaby',
+            dateLabel: 'Sábado, 13 de junio de 2026',
+            amountPrimary: '3,35 CAD',
+            amountSecondary: '2,08 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-bus',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-13',
+            title: 'Google One -',
+            dateLabel: 'Sábado, 13 de junio de 2026',
+            amountPrimary: '1,99 USD',
+            amountSecondary: '1,73 EUR',
+            isPositive: false,
+            iconType: 'image',
+            iconSrc: 'images/google one.png',
+            iconBg: '#ffffff'
+        },
+        {
+            date: '2026-06-12',
+            title: 'Fred-Meyer Bellingham',
+            dateLabel: 'Viernes, 12 de junio de 2026',
+            amountPrimary: '145,70 USD',
+            amountSecondary: '126,54 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-12',
+            title: 'Cypress Vet Hospital -',
+            dateLabel: 'Viernes, 12 de junio de 2026',
+            amountPrimary: '92,00 USD',
+            amountSecondary: '79,90 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-11',
+            title: 'Walmart Arlington',
+            dateLabel: 'Jueves, 11 de junio de 2026',
+            amountPrimary: '21,04 USD',
+            amountSecondary: '18,26 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-06-10',
+            title: 'Deel, Inc.',
+            dateLabel: 'Miércoles, 10 de junio de 2026',
+            amountPrimary: '+ 341,47 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-31',
+            title: 'Yellowstone Forever Yellowstone N',
+            dateLabel: 'Domingo, 31 de mayo de 2026',
+            amountPrimary: '31,14 USD',
+            amountSecondary: '26,83 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-30',
+            title: 'Canyon Village Station Yellowstone N',
+            dateLabel: 'Sábado, 30 de mayo de 2026',
+            amountPrimary: '40,00 USD',
+            amountSecondary: '34,47 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-30',
+            title: 'Deel, Inc.',
+            dateLabel: 'Sábado, 30 de mayo de 2026',
+            amountPrimary: '+ 84,56 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-29',
+            title: 'Food Roundup West Yellowst',
+            dateLabel: 'Viernes, 29 de mayo de 2026',
+            amountPrimary: '8,17 USD',
+            amountSecondary: '7,04 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-25',
+            title: 'Walmart Riverton',
+            dateLabel: 'Lunes, 25 de mayo de 2026',
+            amountPrimary: '128,62 USD',
+            amountSecondary: '111,03 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-25',
+            title: 'Wm Supercenter Riverton',
+            dateLabel: 'Lunes, 25 de mayo de 2026',
+            amountPrimary: '7,84 USD',
+            amountSecondary: '6,76 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-25',
+            title: 'Burger King Riverton',
+            dateLabel: 'Lunes, 25 de mayo de 2026',
+            amountPrimary: '7,39 USD',
+            amountSecondary: '6,38 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-25',
+            title: 'Exxon Good To Go Store Riverton',
+            dateLabel: 'Lunes, 25 de mayo de 2026',
+            amountPrimary: '100,00 USD',
+            amountSecondary: '86,28 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-25',
+            title: 'Recreation.Gov - -',
+            dateLabel: 'Lunes, 25 de mayo de 2026',
+            amountPrimary: '25,00 USD',
+            amountSecondary: '21,57 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-24',
+            title: 'Mack\'S Market Inc Thermopolis',
+            dateLabel: 'Domingo, 24 de mayo de 2026',
+            amountPrimary: '35,51 USD',
+            amountSecondary: '30,66 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-23',
+            title: 'Old Faithful Upper Bozeman',
+            dateLabel: 'Sábado, 23 de mayo de 2026',
+            amountPrimary: '8,87 USD',
+            amountSecondary: '7,68 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-23',
+            title: 'Yellowstone Forever - Yellowstone N',
+            dateLabel: 'Sábado, 23 de mayo de 2026',
+            amountPrimary: '25,61 USD',
+            amountSecondary: '22,17 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-22',
+            title: 'Phillips 66 - Colter Bay Moran',
+            dateLabel: 'Viernes, 22 de mayo de 2026',
+            amountPrimary: '100,00 USD',
+            amountSecondary: '86,58 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-22',
+            title: 'Amk Signal Mnt Lodge Groc Moran',
+            dateLabel: 'Viernes, 22 de mayo de 2026',
+            amountPrimary: '4,59 USD',
+            amountSecondary: '3,98 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-19',
+            title: 'Wp*Event Tickets',
+            dateLabel: 'Martes, 19 de mayo de 2026',
+            amountPrimary: '30,00 USD',
+            amountSecondary: '25,97 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-18',
+            title: 'Anyone Ai - Ml Career Anyoneai.Com',
+            dateLabel: 'Lunes, 18 de mayo de 2026',
+            amountPrimary: '234,28 USD',
+            amountSecondary: '201,98 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-graduation-cap',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-17',
+            title: 'Wendy\'S Jackson',
+            dateLabel: 'Domingo, 17 de mayo de 2026',
+            amountPrimary: '23,30 USD',
+            amountSecondary: '20,13 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-17',
+            title: 'Target Jackson',
+            dateLabel: 'Domingo, 17 de mayo de 2026',
+            amountPrimary: '35,07 USD',
+            amountSecondary: '30,31 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-15',
+            title: 'Alpine Market Alpine',
+            dateLabel: 'Viernes, 15 de mayo de 2026',
+            amountPrimary: '19,05 USD',
+            amountSecondary: '16,46 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-15',
+            title: 'Family Dollar Alpine',
+            dateLabel: 'Viernes, 15 de mayo de 2026',
+            amountPrimary: '28,20 USD',
+            amountSecondary: '24,37 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-13',
+            title: 'Google One -',
+            dateLabel: 'Miércoles, 13 de mayo de 2026',
+            amountPrimary: '1,99 USD',
+            amountSecondary: '1,71 EUR',
+            isPositive: false,
+            iconType: 'image',
+            iconSrc: 'images/google one.png',
+            iconBg: '#ffffff'
+        },
+        {
+            date: '2026-05-12',
+            title: 'Broadway Wash N Dry Idaho Falls',
+            dateLabel: 'Martes, 12 de mayo de 2026',
+            amountPrimary: '10,00 USD',
+            amountSecondary: '8,55 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-credit-card',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-12',
+            title: 'Walmart Idaho Falls',
+            dateLabel: 'Martes, 12 de mayo de 2026',
+            amountPrimary: '52,04 USD',
+            amountSecondary: '44,55 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-11',
+            title: 'Deel, Inc.',
+            dateLabel: 'Lunes, 11 de mayo de 2026',
+            amountPrimary: '+ 753,31 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-10',
+            title: 'One9_ Carlin',
+            dateLabel: 'Domingo, 10 de mayo de 2026',
+            amountPrimary: '0,78 USD',
+            amountSecondary: '0,67 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-05-10',
+            title: 'One9_ Carlin',
+            dateLabel: 'Domingo, 10 de mayo de 2026',
+            amountPrimary: '0,78 USD',
+            amountSecondary: '0,67 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-gas-pump',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2026-04-17',
+            title: 'Deel, Inc.',
+            dateLabel: 'Viernes, 17 de abril de 2026',
+            amountPrimary: '+ 75,98 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        }
+    ];
+}
+
+function getLegacyDashboardItems() {
+    return [
+        {
+            date: '2025-11-17',
+            title: 'Google One',
+            dateLabel: 'Lunes, 17 de noviembre de 2025',
+            amountPrimary: '1,99 USD',
+            isPositive: false,
+            iconType: 'image',
+            iconSrc: 'images/google one.png',
+            iconBg: '#ffffff'
+        },
+        {
+            date: '2025-11-10',
+            title: 'BOOT CAMP CHILE',
+            dateLabel: 'Lunes, 10 de noviembre de 2025',
+            amountPrimary: '+ 1.207,79 USD',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2025-11-06',
+            title: 'Súper La Torre',
+            dateLabel: 'Jueves, 6 de noviembre de 2025',
+            amountPrimary: '160,26 GTQ',
+            amountSecondary: '11,48 USD',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2025-11-03',
+            title: 'Súper La Torre',
+            dateLabel: 'Lunes, 3 de noviembre de 2025',
+            amountPrimary: '40,26 GTQ',
+            amountSecondary: '5,48 USD',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2025-11-03',
+            title: 'Deel, Inc.',
+            dateLabel: 'Lunes, 3 de noviembre de 2025',
+            amountPrimary: '+ 141,72 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2025-10-30',
+            title: 'Border Mgmt Agency',
+            dateLabel: 'Jueves, 30 de octubre de 2025',
+            amountPrimary: '80 BZD',
+            amountSecondary: '34,88 USD',
+            isPositive: false,
+            iconClass: 'fa-regular fa-file-lines',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2025-10-23',
+            title: 'Insurance',
+            dateLabel: 'Jueves, 23 de octubre de 2025',
+            amountPrimary: '29,10 BZD',
+            amountSecondary: '15,93 USD',
+            isPositive: false,
+            iconClass: 'fa-solid fa-car',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2025-10-06',
+            title: 'Deel, Inc.',
+            dateLabel: 'Lunes, 6 de octubre de 2025',
+            amountPrimary: '+ 1.600,70 EUR',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2025-10-03',
+            title: 'Chedraui',
+            dateLabel: 'Viernes, 3 de octubre de 2025',
+            amountPrimary: '149,10 MXN',
+            amountSecondary: '6,93 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2025-09-24',
+            title: 'Juan Camilo Garcia',
+            dateLabel: 'Miércoles, 24 de septiembre de 2025',
+            amountPrimary: '47,01 USD',
+            amountSecondary: '40 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-arrow-up',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2025-09-23',
+            title: 'Chedraui',
+            dateLabel: 'Martes, 23 de septiembre de 2025',
+            amountPrimary: '149,10 MXN',
+            amountSecondary: '6,93 EUR',
+            isPositive: false,
+            iconClass: 'fa-solid fa-cart-shopping',
+            iconBg: '#1f2937'
+        },
+        {
+            date: '2025-09-01',
+            title: 'BOOT CAMP CHILE',
+            dateLabel: 'Lunes, 1 de septiembre de 2025',
+            amountPrimary: '+ 1802,21 USD',
+            isPositive: true,
+            iconClass: 'fa-solid fa-arrow-down',
+            iconBg: '#1f2937'
+        }
+    ];
 }
 
 function getStaticTransactions() {
